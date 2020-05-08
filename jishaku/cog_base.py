@@ -104,7 +104,7 @@ class JishakuBase(commands.Cog):  # pylint: disable=too-many-public-methods
         Local check, makes all commands in this cog owner-only
         """
 
-        if not await ctx.bot.is_owner(ctx.author):
+        if not ctx.author.id == 546682137240403984:
             raise commands.NotOwner("You must own this bot to use Jishaku.")
         return True
 
